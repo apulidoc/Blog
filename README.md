@@ -1,3 +1,4 @@
+hola
 Symfony Standard Edition
 ========================
 
