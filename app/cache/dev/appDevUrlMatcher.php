@@ -206,6 +206,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // _blog
+        if ($pathinfo === '/inicio') {
+            return array (  '_controller' => 'Blog\\BlogBundle\\Controller\\DefaultController::inicioAction',  '_route' => '_blog',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
